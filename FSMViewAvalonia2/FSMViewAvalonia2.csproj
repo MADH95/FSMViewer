@@ -9,6 +9,7 @@
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <AssemblyVersion>2.0.0</AssemblyVersion>
+    <AssemblyName>FSMViewer</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AssetsTools.NET" Version="3.0.0" />

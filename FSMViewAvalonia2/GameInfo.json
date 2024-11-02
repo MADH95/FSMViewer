@@ -1,9 +1,7 @@
 {
-    "name": "Hollow Knight",
-    "steamid": 367520,
+    "name": "",
+    "steamid": 0,
     "dataDirs": [
-        "hollow_knight_Data",
-        "Hollow Knight_Data",
-        "Hollow_Knight_Data"
+        ""
     ]
 }

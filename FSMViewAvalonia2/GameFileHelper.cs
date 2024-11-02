@@ -9,15 +9,11 @@ public static class GameFileHelper
     public class GameInfo
     {
         [JsonProperty("name")]
-        public string Name { get; set; } = "Hollow Knight";
+        public string Name { get; set; } = "";
         [JsonProperty("steamid")]
-        public int SteamId { get; set; } = 367520;
+        public int SteamId { get; set; } = 0;
         [JsonProperty("dataDirs")]
-        public List<string> DataDirs { get; set; } = [
-            "hollow_knight_Data",
-            "Hollow Knight_Data",
-            "Hollow_Knight_Data"
-        ];
+        public List<string> DataDirs { get; set; } = [];
     }
     public static readonly GameInfo gameInfo;
 
@@ -37,16 +33,16 @@ public static class GameFileHelper
 
     public static async Task<string> FindHollowKnightPath(Window win)
     {
-        if (!string.IsNullOrEmpty(Config.config.hkPath))
+        if (!string.IsNullOrEmpty(Config.config.gamePath))
         {
-            return Config.config.hkPath;
+            return Config.config.gamePath;
         }
 
         string path = await FindSteamGamePath(win, gameInfo.SteamId, gameInfo.Name);
 
         if (path != null)
         {
-            Config.config.hkPath = path;
+            Config.config.gamePath = path;
         }
 
         return path;
